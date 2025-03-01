@@ -9,13 +9,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.a35b_crud.R
 import com.example.a35b_crud.databinding.ActivityRegisterBinding
 import com.example.a35b_crud.model.UserModel
-import com.example.a35b_crud.repository.UserRepository
 import com.example.a35b_crud.repository.UserRepositoryImpl
 import com.example.a35b_crud.utils.LoadingUtils
 import com.example.a35b_crud.viewmodel.UserViewModel
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding

@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.a35b_crud" />
-                  <option name="mobileSdkAppId" value="1:1018754077102:android:d8a9791073ded9e106383f" />
-                  <option name="projectId" value="c35b-1668e" />
-                  <option name="projectNumber" value="1018754077102" />
+                  <option name="mobileSdkAppId" value="1:206103665078:android:ebb6a79716e5a796ee8917" />
+                  <option name="projectId" value="kimty-s-collection" />
+                  <option name="projectNumber" value="206103665078" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

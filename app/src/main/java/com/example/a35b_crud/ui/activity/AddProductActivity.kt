@@ -1,6 +1,5 @@
 package com.example.a35b_crud.ui.activity
 
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log

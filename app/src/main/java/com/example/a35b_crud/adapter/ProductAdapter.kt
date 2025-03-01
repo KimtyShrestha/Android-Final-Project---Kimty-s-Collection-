@@ -2,12 +2,10 @@ package com.example.a35b_crud.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.icu.text.Transliterator.Position
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a35b_crud.R
 import com.example.a35b_crud.model.ProductModel

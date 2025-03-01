@@ -6,26 +6,29 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     tools:context=".ui.activity.AddProductActivity">
 
 
   <ImageView
       android:id="@+id/imageBrowse"
-      android:src="@drawable/imageplaceholder"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
+      android:layout_width="match_parent"
+      android:layout_height="284dp"
+      android:src="@drawable/imageplaceholder" />
+
   <EditText
       android:id="@+id/editProductName"
       android:hint="Enter product name"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"/>
 
   <EditText
       android:id="@+id/editProductprice"
       android:hint="Enter product price"
       android:inputType="numberDecimal"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content" />
 
   <EditText
       android:id="@+id/editProductDesc"
@@ -38,5 +41,6 @@
       android:text="Add Product"
       android:layout_gravity="center"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"/>
 </LinearLayout>
