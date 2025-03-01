@@ -9,6 +9,25 @@
     android:background="@drawable/background_gradient"
     tools:context=".ui.activity.AddProductActivity">
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Kimty’s Collection"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      android:textColor="@color/black"
+      android:layout_gravity="center"
+      android:paddingBottom="8dp"
+      android:layout_marginTop="50dp"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="All kinds of children Accessories"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:layout_gravity="center"
+      android:paddingBottom="16dp" />
 
   <ImageView
       android:id="@+id/imageBrowse"
@@ -42,5 +61,5 @@
       android:layout_gravity="center"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="50dp"/>
+      android:layout_marginTop="20dp"/>
 </LinearLayout>
