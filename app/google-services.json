@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "206103665078",
+    "project_id": "kimty-s-collection",
+    "storage_bucket": "kimty-s-collection.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206103665078:android:ebb6a79716e5a796ee8917",
+        "android_client_info": {
+          "package_name": "com.example.a35b_crud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZo5TVC_Acu5jkZfiwtcyGU0gOQPqQB-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
