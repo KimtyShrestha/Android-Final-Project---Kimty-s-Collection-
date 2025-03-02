@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     android:padding="16dp"
     tools:context=".ui.activity.LoginActivity"
     android:background="@drawable/background_gradient">
@@ -67,6 +68,11 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/displayLoginResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/btnSignupnavigate"

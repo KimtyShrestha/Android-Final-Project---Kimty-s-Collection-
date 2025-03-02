@@ -1,3 +1,4 @@
+
 package com.example.a35b_crud.ui.activity
 
 import android.os.Bundle
@@ -9,9 +10,13 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.a35b_crud.R
 import com.example.a35b_crud.databinding.ActivityRegisterBinding
 import com.example.a35b_crud.model.UserModel
+import com.example.a35b_crud.repository.UserRepository
 import com.example.a35b_crud.repository.UserRepositoryImpl
 import com.example.a35b_crud.utils.LoadingUtils
 import com.example.a35b_crud.viewmodel.UserViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
@@ -29,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
 
-        val userRepository = UserRepositoryImpl()
+        val userRepository = UserRepositoryImpl(FirebaseAuth.getInstance())
 
         userViewModel = UserViewModel(userRepository)
 
@@ -45,7 +50,7 @@ class RegisterActivity : AppCompatActivity() {
             var contact: String = binding.registerContact.text.toString()
 
             userViewModel.signup(email,password){
-                success,message,userId ->
+                    success,message,userId ->
                 if(success){
                     val userModel = UserModel(
                         userId,

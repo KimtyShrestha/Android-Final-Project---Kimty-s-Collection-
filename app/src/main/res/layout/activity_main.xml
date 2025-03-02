@@ -6,19 +6,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="16dp"
+        android:text="WELCOME"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Kimty's Collection !"
-        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="9dp"
+        android:paddingBottom="8dp"
+        android:text="Kimty’s Collection"
         android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="16dp"
+        android:text="All kinds of children Accessories"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="352dp"
+        android:layout_height="252dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="297dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="159dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Let's Get Started!"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

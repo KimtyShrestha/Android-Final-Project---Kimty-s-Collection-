@@ -1,5 +1,6 @@
 package com.example.a35b_crud.repository
 
+import android.widget.Toast
 import com.example.a35b_crud.model.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -9,9 +10,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class UserRepositoryImpl : UserRepository {
+class UserRepositoryImpl(var auth: FirebaseAuth) : UserRepository {
 
-    var auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     val database: FirebaseDatabase = FirebaseDatabase.getInstance()
     val reference: DatabaseReference = database.reference.child("users")
@@ -22,7 +22,6 @@ class UserRepositoryImpl : UserRepository {
                 callback(true, "Login successfull")
             } else {
                 callback(false, it.exception?.message.toString())
-
             }
         }
     }
@@ -106,13 +105,13 @@ class UserRepositoryImpl : UserRepository {
         callback: (Boolean, String) -> Unit
     ) {
         reference.child(userId).updateChildren(data)
-                    .addOnCompleteListener {
-            if (it.isSuccessful) {
-                callback(true, "Profile edited successfully")
-            } else {
-                callback(false, "Unable to edited profile")
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    callback(true, "Profile edited successfully")
+                } else {
+                    callback(false, "Unable to edited profile")
 
+                }
             }
-        }
     }
 }
