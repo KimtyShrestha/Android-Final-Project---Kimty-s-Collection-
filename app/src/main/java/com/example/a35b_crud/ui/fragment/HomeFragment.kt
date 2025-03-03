@@ -36,7 +36,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        productAdapter = ProductAdapter(productList)
+        // Pass a lambda function to handle delete clicks
+        productAdapter = ProductAdapter(productList) { product ->
+            deleteProductFromFirestore(product)
+        }
         binding.recyclerViewProducts.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = productAdapter
@@ -50,8 +53,23 @@ class HomeFragment : Fragment() {
                 productList.clear()
                 for (document in result) {
                     val product = document.toObject(Product::class.java)
+                    product.id = document.id // Set the Firestore document ID to the product
                     productList.add(product)
                 }
+                productAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener { exception ->
+                // Handle the error
+            }
+    }
+
+    private fun deleteProductFromFirestore(product: Product) {
+        db.collection("products")
+            .document(product.id) // Use the Firestore document ID to delete the product
+            .delete()
+            .addOnSuccessListener {
+                // Remove the product from the list and notify the adapter
+                productList.remove(product)
                 productAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->

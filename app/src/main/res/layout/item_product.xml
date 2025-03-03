@@ -1,30 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:padding="8dp">
 
-    <TextView
-        android:id="@+id/textViewProductName"
-        android:layout_width="wrap_content"
+    <!-- Product Details (Vertical LinearLayout) -->
+    <LinearLayout
+        android:id="@+id/productDetails"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Product Name"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:layout_toStartOf="@+id/buttonDelete"
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:id="@+id/textViewProductDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Product Description"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textViewProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewProductPrice"
+        <TextView
+            android:id="@+id/textViewProductDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Description"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Price"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Delete Button (Right Corner) -->
+    <Button
+        android:id="@+id/buttonDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product Price"
-        android:textSize="16sp"
-        android:textColor="@color/black" />
-</LinearLayout>
+        android:text="Delete"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp" />
+</RelativeLayout>
