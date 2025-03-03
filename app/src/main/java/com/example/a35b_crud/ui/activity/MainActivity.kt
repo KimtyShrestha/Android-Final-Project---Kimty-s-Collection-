@@ -1,4 +1,4 @@
-package com.example.a35b_crud
+package com.example.a35b_crud.ui.activity
 
 import android.content.Intent // Add this import
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button // Add this import for Button
-import com.example.a35b_crud.ui.activity.LoginActivity
+import com.example.a35b_crud.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

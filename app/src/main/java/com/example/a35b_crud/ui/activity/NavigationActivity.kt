@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.a35b_crud.R
 import com.example.a35b_crud.databinding.ActivityNavigationBinding
-import com.example.a35b_crud.ui.fragment.CartFragment
+import com.example.a35b_crud.ui.fragment.AddProductFragment
 import com.example.a35b_crud.ui.fragment.HomeFragment
 import com.example.a35b_crud.ui.fragment.ProfileFragment
 
@@ -36,7 +36,7 @@ class NavigationActivity : AppCompatActivity() {
         navigationBinding.buttomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menuHome -> replaceFragment(HomeFragment())
-                R.id.menuCart -> replaceFragment(CartFragment())
+                R.id.menuAddProduct -> replaceFragment(AddProductFragment())
                 R.id.menuProfile -> replaceFragment(ProfileFragment())
                 else -> {}
             }

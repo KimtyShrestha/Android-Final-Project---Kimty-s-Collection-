@@ -8,7 +8,7 @@
     android:background="@drawable/background_gradient"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.activity.MainActivity">
 
     <TextView
         android:id="@+id/textView"
